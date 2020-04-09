@@ -10,6 +10,6 @@
   </PropertyGroup>
   <Import Project="Penguin.Projects.Shared\Penguin.Projects.Shared.csproj" />
   <ItemGroup>
-    <PackageReference Include="Penguin.Web.Abstractions" Version="1.0.1-T9UEQUJ" />
+    <PackageReference Include="Penguin.Web.Abstractions" Version="1.0.1-T9UFJ6O" />
   </ItemGroup>
 </Project>
