@@ -1,4 +1,5 @@
-﻿using Penguin.Web.Abstractions;
+﻿using Penguin.Api.Abstractions.ObjectArrays;
+using Penguin.Web.Abstractions;
 using System.Collections.Generic;
 
 namespace Penguin.Api.Abstractions.Interfaces
@@ -7,6 +8,7 @@ namespace Penguin.Api.Abstractions.Interfaces
     {
         IWebClient Client { get; }
         IJavascriptEngine JavascriptEngine { get; }
-        Dictionary<string, IApiServerResponse> PreviousResponses { get; set; }
+        IApiServerInteractionCollection Interactions { get; set; }
+        IObjectArray SessionObjects { get; }
     }
 }

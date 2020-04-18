@@ -7,11 +7,13 @@ namespace Penguin.Api.Abstractions.Interfaces
         new TRequest Request { get; }
         new TResponse Response { get; }
 
-        new TResponse Execute(IApiPlaylistSessionContainer Container);
+        new IApiServerInteraction<TRequest, TResponse> Execute(IApiPlaylistSessionContainer Container);
     }
 
     public interface IPlaylistItem
     {
+        void Reset();
+        bool Enabled { get; }
         bool Executed { get; }
         string Id { get; set; }
         IApiPayload Request { get; }
@@ -19,6 +21,6 @@ namespace Penguin.Api.Abstractions.Interfaces
         List<ITransformation> Transformations { get; set; }
         string Url { get; set; }
 
-        IApiServerResponse Execute(IApiPlaylistSessionContainer Container);
+        IApiServerInteraction Execute(IApiPlaylistSessionContainer Container);
     }
 }
