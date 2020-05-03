@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Penguin.Api.Abstractions.Interfaces
+﻿namespace Penguin.Api.Abstractions.Interfaces
 {
     public interface IApiServerInteraction<TRequest, TResponse> : IApiServerInteraction where TRequest : IApiPayload where TResponse : IApiServerResponse
     {

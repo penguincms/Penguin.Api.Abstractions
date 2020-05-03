@@ -4,8 +4,8 @@ namespace Penguin.Api.Abstractions.Interfaces
 {
     public interface IApiPayload
     {
-        string Url { get; }
         IDictionary<string, string> Headers { get; }
+        string Url { get; }
 
         void SetValue(string path, string Value);
 
