@@ -17,6 +17,7 @@ namespace Penguin.Api.Abstractions.Interfaces
         string Id { get; set; }
 
         List<ITransformation> Transformations { get; set; }
+        List<IExecutionCondition> Conditions { get; set; }
 
         void Execute(IApiPlaylistSessionContainer Container);
 

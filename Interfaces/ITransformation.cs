@@ -9,6 +9,6 @@ namespace Penguin.Api.Abstractions.Interfaces
 
         void Transform(KeyValuePair<string, IApiServerResponse> responseToCheck, IApiPayload destination);
 
-        bool TryGetTransformedValue(IApiServerResponse source, out string newValue);
+        bool TryGetTransformedValue(IApiServerResponse source, out object newValue);
     }
 }
