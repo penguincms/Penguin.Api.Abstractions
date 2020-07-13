@@ -1,7 +1,4 @@
 ﻿using Penguin.Web.Abstractions.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Penguin.Api.Abstractions.Interfaces
 {
@@ -17,10 +14,9 @@ namespace Penguin.Api.Abstractions.Interfaces
 
     public interface IHttpPlaylistItem : IPlaylistItem<IApiServerInteraction>
     {
-
-        string Url { get; set; }
         IApiPayload Request { get; }
         IApiServerResponse Response { get; }
+        string Url { get; set; }
 
         bool TryCreate(IHttpServerRequest request, IHttpServerResponse response, out IHttpPlaylistItem item);
     }

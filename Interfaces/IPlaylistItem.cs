@@ -1,5 +1,4 @@
-﻿using Penguin.Web.Abstractions.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Penguin.Api.Abstractions.Interfaces
 {
@@ -10,6 +9,7 @@ namespace Penguin.Api.Abstractions.Interfaces
 
     public interface IPlaylistItem
     {
+        List<IExecutionCondition> Conditions { get; set; }
         bool Enabled { get; }
 
         bool Executed { get; }
@@ -17,7 +17,6 @@ namespace Penguin.Api.Abstractions.Interfaces
         string Id { get; set; }
 
         List<ITransformation> Transformations { get; set; }
-        List<IExecutionCondition> Conditions { get; set; }
 
         void Execute(IApiPlaylistSessionContainer Container);
 
