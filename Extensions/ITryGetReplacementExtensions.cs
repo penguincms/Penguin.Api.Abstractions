@@ -1,4 +1,4 @@
-﻿using Penguin.Api.Abstractions.Interfaces;
+using Penguin.Api.Abstractions.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -29,7 +29,6 @@ namespace Penguin.Api.Abstractions.Extensions
             {
                 throw new ArgumentNullException(nameof(toReplace));
             }
-
 
             foreach (string possibility in toReplace.Split(new string[] { " ?? " }, StringSplitOptions.None))
             {
