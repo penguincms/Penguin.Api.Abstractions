@@ -9,14 +9,15 @@ namespace Penguin.Api.Abstractions.Interfaces
 
     public interface IPlaylistItem
     {
-        List<IExecutionCondition> Conditions { get; set; }
+        IList<IExecutionCondition> Conditions { get; set; }
+
         bool Enabled { get; }
 
         bool Executed { get; }
 
         string Id { get; set; }
 
-        List<ITransformation> Transformations { get; set; }
+        IList<ITransformation> Transformations { get; set; }
 
         void Execute(IApiPlaylistSessionContainer Container);
 

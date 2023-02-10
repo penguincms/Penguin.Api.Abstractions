@@ -6,7 +6,9 @@ namespace Penguin.Api.Abstractions.Interfaces
     public interface IApiServerInteractionCollection : IEnumerable<IApiServerInteraction>
     {
         IPropertyDictionary<string, IApiPayload> Requests { get; }
+
         IPropertyDictionary<string, IApiServerResponse> Responses { get; }
+
         IApiServerInteraction this[string id] { get; }
 
         void Add(string id, IApiServerResponse response);

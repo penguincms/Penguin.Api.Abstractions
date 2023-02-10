@@ -3,13 +3,16 @@
     public interface IApiServerInteraction<TRequest, TResponse> : IApiServerInteraction where TRequest : IApiPayload where TResponse : IApiServerResponse
     {
         new TRequest Request { get; }
+
         new TResponse Response { get; }
     }
 
     public interface IApiServerInteraction
     {
         string Id { get; set; }
+
         IApiPayload Request { get; }
+
         IApiServerResponse Response { get; }
     }
 }

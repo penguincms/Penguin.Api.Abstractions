@@ -5,6 +5,7 @@ namespace Penguin.Api.Abstractions.Interfaces
     public interface IApiPayload
     {
         IDictionary<string, string> Headers { get; }
+
         string Url { get; }
 
         void SetValue(string path, object Value);
