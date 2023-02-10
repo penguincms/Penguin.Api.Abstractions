@@ -1,4 +1,4 @@
-﻿namespace Penguin.Api.Abstractions.ObjectArrays
+﻿namespace Penguin.Api.Abstractions.Interfaces
 {
     public interface IObjectArray
     {

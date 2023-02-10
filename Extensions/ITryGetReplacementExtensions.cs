@@ -1,7 +1,5 @@
 using Penguin.Api.Abstractions.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Penguin.Api.Abstractions.Extensions
 {
@@ -9,15 +7,11 @@ namespace Penguin.Api.Abstractions.Extensions
     {
         public static string FindReplacement(this ITryGetReplacement source, string toReplace, IApiPlaylistSessionContainer Container)
         {
-            if (source.TryFindReplacement(toReplace, Container, out object v))
-            {
-                return v.ToString();
-            }
-            else
-            {
-                throw new Exception($"Can not find replacement for '{toReplace}'");
-            }
+            return source.TryFindReplacement(toReplace, Container, out object v)
+                ? v.ToString()
+                : throw new Exception($"Can not find replacement for '{toReplace}'");
         }
+
         public static bool TryFindReplacement(this ITryGetReplacement source, string toReplace, IApiPlaylistSessionContainer Container, out object v)
         {
             if (source is null)
